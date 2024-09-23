@@ -65,9 +65,8 @@ class GameManager {
         const dy = obj.y - PlayerController.y - PlayerController.playerSize;
         const distanceSquared = dx * dx + dy * dy;
         if (distanceSquared < maxDistance * maxDistance) {
-            const dist = Math.sqrt(distanceSquared);
-            obj.x += dx * 0.5 / dist;
-            obj.y += dy * 0.5 / dist;
+            obj.x += dx * 0.05;
+            obj.y += dy * 0.05;
         }
     }
     static solveCollisions2(obj) {
